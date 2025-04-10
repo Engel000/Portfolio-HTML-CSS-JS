@@ -88,6 +88,27 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to bottom right, #f9f9ff, #e6f7f1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.about::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #12A45622 10%, transparent 70%);
+    top: -150px;
+    right: -150px;
+    z-index: 0;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
 }
 
 .about .about-container {
@@ -166,6 +187,17 @@ transition: 0.2s ease-in-out;
     align-items: center;
     justify-content: center;
     gap: 5rem;
+    
+}
+.experience{
+    background: linear-gradient(to bottom right,#e6f7f1, #f9f9ff);
+    position: relative;
+    overflow: hidden;
+}
+.contact{
+    background: linear-gradient(to bottom right,#e6f7f1, #f9f9ff);
+    position: relative;
+    overflow: hidden;
 }
 .experience img{
     width: 24vw;
@@ -212,6 +244,11 @@ color: white;
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(to bottom, blue, red);
 }
+.projects{
+    background: linear-gradient(to bottom right, #f9f9ff, #e6f7f1);
+    position: relative;
+    overflow: hidden;
+}
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -236,9 +273,9 @@ color: white;
     margin: 0 auto;
   }
 .project-card:hover{
+    transform: translateY(-10px) scale(1.02);
     background-color: black;
     color: white;
-    transform: translateY(-10px)scale(1.02);
     cursor: pointer;
 }
 .project-card img{
@@ -248,6 +285,7 @@ color: white;
 .project-card:hover .btn{
     border: 2px solid white;
     color: white;
+    
 }
 .project-card:hover .btn:hover{
     border: 2px solid white;
@@ -312,6 +350,7 @@ footer ul li a{
     font-size: 300;
     margin-top: 2rem;
 }
+
 
 @media(max-width:1200px){
     header{
@@ -427,3 +466,6 @@ footer ul{
     gap: 1rem;
 }
 }
+
+
+  

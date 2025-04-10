@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
+
+
     <header class="header">
         <a href="#" class="logo"> <span>Engel Nieves</span> </a>
 
@@ -22,8 +26,14 @@
         <i class="fa-solid fa-bars" id="menu-icon" ></i>
     </header>
 
+
+
+
+
+
+
     <section id="about" class="about">
-        <div class="about-container">
+        <div class="about-container"data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="1000">
             <img src="image.jpg.png" alt="">
         <div class="info-box">
             <div class="text">
@@ -33,21 +43,24 @@
             </div>
             <div class="btn-group">
                 <div class="btn">Download CV</div>
-                <div class="btn">Contact</div>
+              <a href="#contact" style="color: black;"><div class="btn">Contact</div></a>  
             </div>
-<div class="socials">
-    <i class="fa-brands fa-github"></a></i>
-    <i class="fa-brands fa-linkedin"></i>
+<div class="socials" >
+    <a href="https://github.com/Engel000" target="_blank" style="color: black;"> <i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/engel-nieves-910b832b9/" target="_blank" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
 </div>
         </div>
  
         </div>
     </section>
-<section id="experience" class="experience">
+
+
+
+<section id="experience" class="experience" >
     <h2 class="section-title">Experience</h2>
     <div class="experience-info">
         <div class="grid">
-            <div class="grid-card">
+            <div class="grid-card"  >
                 <i class="fa-solid fa-gears"></i>
                 <span>Front-End Development</span>
                 <h3>999 Years</h3>
@@ -80,9 +93,13 @@
     </div>
 </section>
 
+
+
+
+
 <section id="projects" class="projects">
     <h2 class="section-title">Recent Projects</h2>
-    <div class="projects-grid">
+    <div class="projects-grid" >
         <div class="project-card">
         <img src="project-1.jpg" alt="">
         <h3>Project X</h3>
@@ -129,8 +146,10 @@
 
            
      </div>
-    
 </section>
+
+
+
 <section id="contact" class="contact">
     <div class="input-box">
         <h2 class="section-title">Contact</h2>
@@ -141,6 +160,11 @@
         <div class="btn">Submit</div>
     </div>
 </section>
+
+
+
+
+
 
 <footer>
     <ul>
@@ -160,7 +184,15 @@
     <p class="copyright">All rights reserved | Engel Nieves</p>
 </footer>
 
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
