@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <!-- Lo Basico del HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 3 enlaces, el primero es la CSS, el segundo los iconos de "Font Awesome" 
+ y por último la librería AOS para hacer Animaciones de Scroll -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <title>Portfolio</title>
 </head>
 <body>
 
 
+    <!--Header // Barra de navegación-->
+
     <header class="header">
+        <button id="dark-mode-toggle" class="visit-btn" >🌙</button>
         <a href="#" class="logo"> <span>Engel Nieves</span> </a>
 
+        <!-- Secciones del Header // Barra de navegación-->
+        
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+<!-- Botón de Visitar GitHub-->
        <a href="https://github.com/Engel000" target="_blank"><button class="visit-btn">Visit Github</button></a> 
+        
+       <!--Botón para sacar el menú en la versión móvil-->
+       <i class="fa-solid fa-bars" id="menu-icon" ></i>
 
-        <i class="fa-solid fa-bars" id="menu-icon" ></i>
     </header>
 
 
@@ -31,20 +44,29 @@
 
 
 
-
+<!--Sección "Sobre mí" o "About"-->
     <section id="about" class="about">
+
+<!--Contiene imagen y texto-->
         <div class="about-container"data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="1000">
-            <img src="image.jpg.png" alt="">
+            
+                    <img src="image.jpg.png" alt="" class="border-hover">
+               
+        <!--Info basiquilla-->
         <div class="info-box">
             <div class="text">
                 <h3>Greetings, I'm</h3>
                 <h1>Engel Nieves</h1>
                 <span>Web Designer</span>
             </div>
+            <!--Un botón que descarga el currículum y otro que lleva a la sección
+            "Contacto"-->
             <div class="btn-group">
                 <div class="btn">Download CV</div>
               <a href="#contact" style="color: black;"><div class="btn">Contact</div></a>  
             </div>
+ 
+<!--Enlaces al Github y al Linked-In-->
 <div class="socials" >
     <a href="https://github.com/Engel000" target="_blank" style="color: black;"> <i class="fa-brands fa-github"></i></a>
     <a href="https://www.linkedin.com/in/engel-nieves-910b832b9/" target="_blank" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
@@ -55,11 +77,13 @@
     </section>
 
 
+<!--Sección "Experiencia"-->
 
 <section id="experience" class="experience" >
     <h2 class="section-title">Experience</h2>
     <div class="experience-info">
         <div class="grid">
+            <!--Tarjetas de ejemplo (4)-->
             <div class="grid-card"  >
                 <i class="fa-solid fa-gears"></i>
                 <span>Front-End Development</span>
@@ -89,16 +113,20 @@
                     Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
             </div>
         </div>
+        <!--Imagen al lado Experiencia-->
         <img src="image.jpg.png" alt="">
     </div>
 </section>
 
 
 
-
+<!--Seccion Proyectos-->
 
 <section id="projects" class="projects">
     <h2 class="section-title">Recent Projects</h2>
+    
+    <!--Cada project Grid contiene una carta de proyecto-->
+    
     <div class="projects-grid" >
         <div class="project-card">
         <img src="project-1.jpg" alt="">
@@ -186,12 +214,15 @@
 
 
 
-
+<!--Scripts-->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
+
+
+<!--Inicializa el AOS para las animaciones de scroll-->
 <script>
-    AOS.init();
+    AOS.init(); 
   </script>
 </body>
 
