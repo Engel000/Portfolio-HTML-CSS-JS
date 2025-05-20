@@ -8,6 +8,9 @@
     list-style:none;/*Quita los estilos por defecto a las listas*/
 }
 
+
+
+
 header{
     align-items: center; /*Centra verticalmente elementos*/
     position: fixed;/*Fija el header en la parte superior*/
@@ -431,6 +434,8 @@ header .visit-btn{
 header #menu-icon{
     display:block;
 }
+
+}
 .nav-links{
     position:absolute;
     top: 100%;
@@ -473,7 +478,7 @@ header .logo{
 footer ul{
     gap: 1rem;
 }
-}
+
 
 
 
