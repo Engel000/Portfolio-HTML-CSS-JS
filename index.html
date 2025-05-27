@@ -1,229 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!-- Lo Basico del HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- 3 enlaces, el primero es la CSS, el segundo los iconos de "Font Awesome" 
- y por último la librería AOS para hacer Animaciones de Scroll -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <title>Portfolio</title>
 </head>
 <body>
 
-
-    <!--Header // Barra de navegación-->
-
     <header class="header">
-        <button id="dark-mode-toggle" class="visit-btn" >🌙</button>
-        <a href="#" class="logo"> <span>Engel Nieves</span> </a>
-
-        <!-- Secciones del Header // Barra de navegación-->
-        
+        <button id="dark-mode-toggle" class="visit-btn">🌙</button>
+        <a href="#" class="logo"><span>Engel Nieves</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-<!-- Botón de Visitar GitHub-->
-       <a href="https://github.com/Engel000" target="_blank"><button class="visit-btn">Visit Github</button></a> 
-        
-       <!--Botón para sacar el menú en la versión móvil-->
-       <i class="fa-solid fa-bars" id="menu-icon" ></i>
-
+        <a href="https://github.com/Engel000" target="_blank"><button class="visit-btn">Visit Github</button></a> 
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
     </header>
 
-
-
-
-
-
-<!--Sección "Sobre mí" o "About"-->
     <section id="about" class="about">
+       <div class="about-container" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="1000">
+    <div class="info-box">
+        <!-- Imagen de perfil añadida -->
+        <img src="./Imagenes/1.FotoDePerfil.jpg" alt="Foto de perfil" class="profile-photo">
 
-<!--Contiene imagen y texto-->
-        <div class="about-container"data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="1000">
-            
-                    <img src="image.jpg.png" alt="" class="border-hover">
-               
-        <!--Info basiquilla-->
-        <div class="info-box">
-            <div class="text">
-                <h3>Greetings, I'm</h3>
-                <h1>Engel Nieves</h1>
-                <span>Web Designer</span>
-            </div>
-            <!--Un botón que descarga el currículum y otro que lleva a la sección
-            "Contacto"-->
-            <div class="btn-group">
-                <div class="btn">Download CV</div>
-              <a href="#contact" style="color: black;"><div class="btn">Contact</div></a>  
-            </div>
- 
-<!--Enlaces al Github y al Linked-In-->
-<div class="socials" >
-    <a href="https://github.com/Engel000" target="_blank" style="color: black;"> <i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/engel-nieves-910b832b9/" target="_blank" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
-</div>
+        <div class="text">
+            <h3>Greetings, I'm</h3>
+            <h1>Engel Nieves</h1>
+            <span>Web Designer and student from IES CMR Valcarcel</span>
         </div>
- 
+        
+        <div class="btn-group">
+            <div class="btn">Download CV</div>
+            <a href="#contact" style="color: black;"><div class="btn">Contact</div></a>  
+        </div>
+
+        <div class="socials">
+            <a href="https://github.com/Engel000" target="_blank" style="color: black;"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/engel-nieves-910b832b9/" target="_blank" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>Front-End Development</span>
+                    <h3>999 Years</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>Front-End Development</span>
+                    <h3>999 Years</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>Front-End Development</span>
+                    <h3>999 Years</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>Front-End Development</span>
+                    <h3>999 Years</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
+                </div>
+            </div>
+            <img src="image.jpg.png" alt="">
         </div>
     </section>
 
-
-<!--Sección "Experiencia"-->
-
-<section id="experience" class="experience" >
-    <h2 class="section-title">Experience</h2>
-    <div class="experience-info">
-        <div class="grid">
-            <!--Tarjetas de ejemplo (4)-->
-            <div class="grid-card"  >
-                <i class="fa-solid fa-gears"></i>
-                <span>Front-End Development</span>
-                <h3>999 Years</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
-            </div>
-            <div class="grid-card">
-                <i class="fa-solid fa-gears"></i>
-                <span>Front-End Development</span>
-                <h3>999 Years</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
-            </div>
-            <div class="grid-card">
-                <i class="fa-solid fa-gears"></i>
-                <span>Front-End Development</span>
-                <h3>999 Years</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
-            </div>
-            <div class="grid-card">
-                <i class="fa-solid fa-gears"></i>
-                <span>Front-End Development</span>
-                <h3>999 Years</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Asperiores dignissimos accusamus sapiente inventore laudantium ullam. Consequatur.</p>
+    <section id="projects" class="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project-1.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
             </div>
         </div>
-        <!--Imagen al lado Experiencia-->
-        <img src="image.jpg.png" alt="">
-    </div>
-</section>
-
-
-
-<!--Seccion Proyectos-->
-
-<section id="projects" class="projects">
-    <h2 class="section-title">Recent Projects</h2>
-    
-    <!--Cada project Grid contiene una carta de proyecto-->
-    
-    <div class="projects-grid" >
-        <div class="project-card">
-        <img src="project-1.jpg" alt="">
-        <h3>Project X</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        <div class="btn-group">
-            <div class="btn">Live Demo</div>
-            <div class="btn">Github</div>
-        </div>
-    </div>
-    </div>
-    <div class="projects-grid">
-        <div class="project-card">
-        <img src="project-2.jpg" alt="">
-        <h3>Project X</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        <div class="btn-group">
-            <div class="btn">Live Demo</div>
-            <div class="btn">Github</div>
-        </div>
-    </div>
-    </div>
-    <div class="projects-grid">
-        <div class="project-card">
-        <img src="project-3.jpg" alt="">
-        <h3>Project X</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum</p>
-        <div class="btn-group">
-            <div class="btn">Live Demo</div>
-            <div class="btn">Github</div>
-        </div>
-    </div>
-    </div>
-    <div class="projects-grid">
-        <div class="project-card">
-         <img src="project-4.jpg" alt="">
-            <h3>Project X</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum</p>
-            <div class="btn-group">
-                <div class="btn">Live Demo</div>
-                <div class="btn">Github</div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project-2.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
             </div>
-        
         </div>
-
-           
-     </div>
-</section>
-
-
-
-<section id="contact" class="contact">
-    <div class="input-box">
-        <h2 class="section-title">Contact</h2>
-        <div class="input">
-            <input type="text" placeholder="emailexample@ghotmaillook.com">
-            <i class="fa-solid fa-folder"></i>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project-3.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
         </div>
-        <div class="btn">Submit</div>
-    </div>
-</section>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project-4.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact</h2>
+            <div class="input">
+                <input type="text" placeholder="emailexample@ghotmaillook.com">
+            </div>
+            <div class="btn">Submit</div>
+        </div>
+    </section>
 
+    <footer>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">All rights reserved | Engel Nieves</p>
+    </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init(); 
+    </script>
+    <script>
+        const trailContainer = document.createElement('div');
+        trailContainer.style.position = 'fixed';
+        trailContainer.style.top = '0';
+        trailContainer.style.left = '0';
+        trailContainer.style.pointerEvents = 'none';
+        trailContainer.style.zIndex = '9999';
+        document.body.appendChild(trailContainer);
 
+        const trailElements = [];
 
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.createElement('div');
+            trail.style.width = '10px';
+            trail.style.height = '10px';
+            trail.style.borderRadius = '50%';
+            trail.style.position = 'absolute';
+            trail.style.left = `${e.clientX}px`;
+            trail.style.top = `${e.clientY}px`;
+            trail.style.background = 'rgba(255, 189, 234, 0.3)';
+            trail.style.boxShadow = '0 0 8px #ff97ef';
+            trail.style.transform = 'translate(-50%, -50%)';
+            trail.style.transition = 'opacity 0.1s ease-out';
+            trail.style.opacity = '1';
 
-<footer>
-    <ul>
-        <li>
-            <a href="#about">About</a>
-        </li>
-        <li>
-            <a href="#experience">Experience</a>
-        </li>
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-    </ul>
-    <p class="copyright">All rights reserved | Engel Nieves</p>
-</footer>
+            trailContainer.appendChild(trail);
+            trailElements.push(trail);
 
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                setTimeout(() => {
+                    trail.remove();
+                }, 400);
+            }, 50);
+        });
 
+        document.body.style.cursor = 'none';
 
-<!--Scripts-->
+        const customCursor = document.createElement('div');
+        customCursor.style.width = '20px';
+        customCursor.style.height = '20px';
+        customCursor.style.borderRadius = '50%';
+        customCursor.style.position = 'fixed';
+        customCursor.style.background = '#fff175';
+        customCursor.style.boxShadow = '0 0 10px #ff97ef';
+        customCursor.style.pointerEvents = 'none';
+        customCursor.style.zIndex = '10000';
+        customCursor.style.transform = 'translate(-50%, -50%)';
+        document.body.appendChild(customCursor);
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = `${e.clientX}px`;
+            customCursor.style.top = `${e.clientY}px`;
+        });
+    </script>
 
-
-<!--Inicializa el AOS para las animaciones de scroll-->
-<script>
-    AOS.init(); 
-  </script>
 </body>
-
 </html>
