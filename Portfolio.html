@@ -6,7 +6,6 @@
   <title>Portfolio Vaporwave - En Construcción</title>
   <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/PortfolioCss.css">
- 
 </head>
 <body>
 <canvas id="bgCanvas"></canvas>
@@ -16,6 +15,8 @@
   <p class="home-subtitle">
     Actualmente esta sección está en construcción.<br />
     Solo hay un mini proyecto que pueda mostrar. (Por ahora).
+    <br><br>
+    Aquí también subiré los modelos 3D que haga.
   </p>
 
   <button class="home-button" onclick="history.back()">Volver a la página anterior</button>
@@ -27,13 +28,11 @@
   <a href="./Paginas/SobreMi.html" class="home-button">Sobre mí</a>
   <a href="./Paginas/SobreMiEstilo1.html" class="home-button">Sobre mí (Estilo alternativo)</a>
   <a href="./Paginas/VaporWave.html" class="home-button">¿Qué es el vaporwave?</a>
-  
-  <p>El "mini proyecto en cuestión</p>
-  <a href="./index.html" class="home-button">Página de presentación</a>
 
+  <p>El "mini proyecto" en cuestión:</p>
+  <a href="./index.html" class="home-button">Página de presentación</a>
 </section>
 
-<!-- Imágenes vaporwave flotantes -->
 <img src="./Imagenes/casete.png" alt="Img 1" class="vaporwave-img" style="top: 20vh; left: 5vw;" />
 <img src="./Imagenes/Pina.png" alt="Img 2" class="vaporwave-img" style="top: 10vh; left: 70vw;" />
 <img src="./Imagenes/icon1.png" alt="Img 3" class="vaporwave-img" style="top: 50vh; left: 50vw;" />
@@ -69,27 +68,23 @@
 
   function animate() {
     ctx.clearRect(0, 0, width, height);
-
     for (let star of stars) {
       star.y += star.speed;
       if (star.y > height) {
         star.y = 0;
         star.x = Math.random() * width;
       }
-
       star.hue += 0.5;
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
       ctx.fillStyle = `hsla(${star.hue}, 80%, 70%, 0.6)`;
       ctx.fill();
     }
-
     requestAnimationFrame(animate);
   }
 
   animate();
 
-  // Cursor personalizado + estela
   const trailContainer = document.createElement('div');
   trailContainer.style.position = 'fixed';
   trailContainer.style.top = '0';
