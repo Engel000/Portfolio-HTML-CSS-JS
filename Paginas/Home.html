@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Vaporwave</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../CSS/Home-Css.css" />
+</head>
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="floating-images">
+    <img src="../Imagenes/casete.png" class="floating-img img1" alt="Cassette flotante" />
+    <img src="../Imagenes/img1.jpg" class="floating-img img2" alt="Estatua flotante" />
+    <img src="../Imagenes/img3.png" class="floating-img img3" alt="Palmera flotante" />
+    <img src="../Imagenes/Pina.png" class="floating-img img4" alt="Piña flotante" />
+  </div>
+
+  <section class="home-section">
+    <h1 class="home-title">TRABAJO DE FIN DE GRADO</h1>
+    <p class="home-subtitle">Diseño, desarrollo de una web de estilo "VaporWave"</p>
+    <a href="./Blog.html" class="home-button">Blog</a>
+    <a href="../Portfolio.html" class="home-button">Portfolio</a>
+    <a href="./Contacto.html" class="home-button">Contacto</a>
+    <a href="./SobreMi.html" class="home-button">Sobre mí</a>
+    <a href="./SobreMiEstilo1.html" class="home-button">Sobre mí (Estilo alternativo)</a>
+    <a href="./VaporWave.html" class="home-button">¿Qué es el vaporwave?</a>
+  </section>
+
+  <script>
+    const trailContainer = document.createElement('div');
+    trailContainer.style.position = 'fixed';
+    trailContainer.style.top = '0';
+    trailContainer.style.left = '0';
+    trailContainer.style.pointerEvents = 'none';
+    trailContainer.style.zIndex = '9999';
+    document.body.appendChild(trailContainer);
+
+    const trailElements = [];
+
+    document.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.style.width = '10px';
+      trail.style.height = '10px';
+      trail.style.borderRadius = '50%';
+      trail.style.position = 'absolute';
+      trail.style.left = `${e.clientX}px`;
+      trail.style.top = `${e.clientY}px`;
+      trail.style.background = 'rgba(255, 189, 234, 0.3)';
+      trail.style.boxShadow = '0 0 8px #ff97ef';
+      trail.style.transform = 'translate(-50%, -50%)';
+      trail.style.transition = 'opacity 0.1s ease-out';
+      trail.style.opacity = '1';
+
+      trailContainer.appendChild(trail);
+      trailElements.push(trail);
+
+      setTimeout(() => {
+        trail.style.opacity = '0';
+        setTimeout(() => trail.remove(), 400);
+      }, 50);
+    });
+
+    document.body.style.cursor = 'none';
+
+    const customCursor = document.createElement('div');
+    customCursor.style.width = '20px';
+    customCursor.style.height = '20px';
+    customCursor.style.borderRadius = '50%';
+    customCursor.style.position = 'fixed';
+    customCursor.style.background = '#fff175';
+    customCursor.style.boxShadow = '0 0 10px #ff97ef';
+    customCursor.style.pointerEvents = 'none';
+    customCursor.style.zIndex = '10000';
+    customCursor.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(customCursor);
+
+    document.addEventListener('mousemove', (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+  </script>
+
+  <script>
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    const stars = [];
+
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    for (let i = 0; i < 120; i++) {
+      stars.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 2 + 0.5,
+        speed: Math.random() * 0.5 + 0.2,
+        hue: Math.floor(Math.random() * 360)
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let star of stars) {
+        star.y += star.speed;
+        if (star.y > height) {
+          star.y = 0;
+          star.x = Math.random() * width;
+        }
+        star.hue += 0.5;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${star.hue}, 80%, 70%, 0.6)`;
+        ctx.fill();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+
+</body>
+</html>

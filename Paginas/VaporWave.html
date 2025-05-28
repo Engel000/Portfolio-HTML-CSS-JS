@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Qué es el Vaporwave?</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../CSS/VaporWave-CSS.css" />
+</head>
+<body>
+
+  <canvas></canvas>
+
+  <header class="headerbox">
+    ¿Qué es el <span class="color-change-title">VaporWave</span>?
+  </header>
+
+  <main class="main">
+    <div class="infobox">
+      <div class="infoboxtitle">VaporWave</div>
+      <div class="content">
+        <p>
+          Vaporwave es un microgénero de música electrónica, un estilo artístico digital y una subcultura de internet surgida a mediados de la década de 2010.
+        </p>
+      </div>
+      <div class="img-container">
+        <img src="../Imagenes/icon2.png" alt="Vaporwave" />
+      </div>
+    </div>
+
+    <div class="infobox">
+      <div class="infoboxtitle">Historia</div>
+      <div class="content">
+        <p>
+          El vaporwave surgió en 2009 en Internet como un subgénero musical y estético nostálgico e irónico, influenciado por el chillwave y el pop hipnagógico. Se caracteriza por usar samples ralentizados de música de los 70-2000, con estética retro digital y corporativa. Su origen se vincula al canal sunsetcorp y al álbum Chuck Person's Eccojams Vol. 1. Alcanzó popularidad entre 2011 y 2012, con álbumes como Floral Shoppe, y se volvió un fenómeno de Tumblr. Más tarde, se fragmentó en subgéneros y fue apropiado políticamente por sectores de la derecha, incluyendo el fenómeno "fashwave". Aunque perdió impacto mainstream, mantiene una comunidad activa en línea.
+        </p>
+      </div>
+      <div class="img-container">
+        <img src="../Imagenes/icon1.png" alt="Historia Vaporwave" />
+      </div>
+    </div>
+
+    <div class="infobox">
+      <div class="infoboxtitle">Curiosidades</div>
+      <div class="content">
+        <ul>
+          <li>Muchos álbumes famosos de vaporwave se lanzaron de forma anónima o bajo seudónimos.</li>
+          <li>El arte visual incluye bustos griegos, palmeras, gráficos retro, y VHS glitch.</li>
+          <li>Es considerado por algunos como una crítica al capitalismo y la cultura de consumo.</li>
+          <li>La estética vaporwave influyó en videojuegos, moda, y diseño gráfico.</li>
+        </ul>
+      </div>
+      <div class="img-container">
+        <img src="../Imagenes/Pina.png" alt="Curiosidades Vaporwave" />
+      </div>
+    </div>
+
+    <div class="infobox_ira">
+      <div class="infoboxtitle_ira">Ir a:</div>
+      <div class="content">
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+          <li class="color-change-title"><a href="./Home.html" class="enlace-vaporwave">Home</a></li>
+          <li class="color-change-title"><a href="./SobreMi.html" class="enlace-vaporwave">Sobre mí</a></li>
+          <li class="color-change-title"><a href="./SobreMiEstilo1.html" class="enlace-vaporwave">Sobre mí (Alternativo)</a></li>
+          <li class="color-change-title"><a href="../Portfolio.html" class="enlace-vaporwave">Portfolio</a></li>
+          <li class="color-change-title"><a href="./Contacto.html" class="enlace-vaporwave">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Página creada como TFG por Engel Nieves - Estilo Vaporwave © 2025
+  </footer>
+
+  <script src="../JavaScript/VaporWave.js"></script>
+
+  <script>
+    const trailContainer = document.createElement('div');
+    trailContainer.style.position = 'fixed';
+    trailContainer.style.top = '0';
+    trailContainer.style.left = '0';
+    trailContainer.style.pointerEvents = 'none';
+    trailContainer.style.zIndex = '9999';
+    document.body.appendChild(trailContainer);
+
+    const trailElements = [];
+
+    document.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.style.width = '10px';
+      trail.style.height = '10px';
+      trail.style.borderRadius = '50%';
+      trail.style.position = 'absolute';
+      trail.style.left = `${e.clientX}px`;
+      trail.style.top = `${e.clientY}px`;
+      trail.style.background = 'rgba(255, 189, 234, 0.3)';
+      trail.style.boxShadow = '0 0 8px #ff97ef';
+      trail.style.transform = 'translate(-50%, -50%)';
+      trail.style.transition = 'opacity 0.1s ease-out';
+      trail.style.opacity = '1';
+
+      trailContainer.appendChild(trail);
+      trailElements.push(trail);
+
+      setTimeout(() => {
+        trail.style.opacity = '0';
+        setTimeout(() => {
+          trail.remove();
+        }, 400);
+      }, 50);
+    });
+
+    document.body.style.cursor = 'none';
+
+    const customCursor = document.createElement('div');
+    customCursor.style.width = '20px';
+    customCursor.style.height = '20px';
+    customCursor.style.borderRadius = '50%';
+    customCursor.style.position = 'fixed';
+    customCursor.style.background = '#fff175';
+    customCursor.style.boxShadow = '0 0 10px #ff97ef';
+    customCursor.style.pointerEvents = 'none';
+    customCursor.style.zIndex = '10000';
+    customCursor.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(customCursor);
+
+    document.addEventListener('mousemove', (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+  </script>
+
+</body>
+</html>

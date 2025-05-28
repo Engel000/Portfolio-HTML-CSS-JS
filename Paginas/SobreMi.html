@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/style-Blog_OtrasPGS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica-1</title>
+
+<!--Fuente "LimeLight"-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Limelight&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body style="background-color: black;">
+    <div class="container">
+<canvas id="canvas"></canvas> 
+<header class="headerbox  title">
+<ul>
+    
+<a href="./Home.html"><li>Home</li></a>
+<a href="../Portfolio.html"><li>Proyectos</li></a>
+<a href="../Portfolio.html"><li>Portfolio</li></a>
+<a href="./Contacto.html"><li>Contacto</li></a>
+
+</ul></header>
+<div class="main">
+
+   
+       
+            
+        <div class="infobox" id="center">
+            <div class="infoboxtitle , color-change"><span class="color-change-bg span-bg , title">Descripción</span></div>
+            <div class="content">
+                <p>
+                    ¡Hola! Me llamo Engel Nieves y actualmente estudio Animación 2D y 3D. Esta página web la he desarrollado como parte de mis prácticas de Formación Profesional, combinando lo que he aprendido sobre diseño  y desarrollo web.
+                </p>
+                <br>
+                <p>Esta versión de estilo de la sección "sobre mí" existe porque quise darle más de un uso más al fondo que hice para el Blog</p>
+            </div>
+        </div>
+
+        <div class="nav-column">
+        <nav class="nav" id="navright">
+            <label for="Nav-izq"><span class=" span-bg , title ">Redes</span></label>
+
+                <ul>
+                    <li>
+                        Instagram
+                    </li>
+                </ul>
+            </nav>
+            
+            <nav class="nav" id="navright">
+                <label for="Nav-izq" class="title">Habilidades</label>
+    
+                    <ul>
+                        <li>
+                            HTML
+                        </li>
+                        <li>
+                            CSS
+                        </li>
+                         <li>
+                            JS
+                        </li>
+                         <li>
+                            UX / UI
+                        </li>
+                    </ul>
+                </nav>
+
+               
+                
+            </div>
+</div>
+
+
+
+
+<script src="script-Blog.js"></script>
+<footer style="text-align: center; font-size: small; color: white;"> 
+    <p> 
+       <a href=""><img src="../Imagenes/LogoWeb_Footer_pequeno.png" alt=""></a> 
+    </p>
+</footer>
+<script>
+  const trailContainer = document.createElement('div');
+  trailContainer.style.position = 'fixed';
+  trailContainer.style.top = '0';
+  trailContainer.style.left = '0';
+  trailContainer.style.pointerEvents = 'none';
+  trailContainer.style.zIndex = '9999';
+  document.body.appendChild(trailContainer);
+
+  const trailElements = [];
+
+  document.addEventListener('mousemove', (e) => {
+    const trail = document.createElement('div');
+    trail.style.width = '10px';
+    trail.style.height = '10px';
+    trail.style.borderRadius = '50%';
+    trail.style.position = 'absolute';
+    trail.style.left = `${e.clientX}px`;
+    trail.style.top = `${e.clientY}px`;
+    trail.style.background = 'rgba(255, 189, 234, 0.3)';
+    trail.style.boxShadow = '0 0 8px #ff97ef';
+    trail.style.transform = 'translate(-50%, -50%)';
+    trail.style.transition = 'opacity 0.1s ease-out';
+    trail.style.opacity = '1';
+
+    trailContainer.appendChild(trail);
+    trailElements.push(trail);
+
+    setTimeout(() => {
+      trail.style.opacity = '0';
+      setTimeout(() => {
+        trail.remove();
+      }, 400);
+    }, 50);
+  });
+
+  // Ocultar el cursor normal
+  document.body.style.cursor = 'none';
+
+  // Crear el cursor personalizado
+  const customCursor = document.createElement('div');
+  customCursor.style.width = '20px';
+  customCursor.style.height = '20px';
+  customCursor.style.borderRadius = '50%';
+  customCursor.style.position = 'fixed';
+  customCursor.style.background = '#fff175';
+  customCursor.style.boxShadow = '0 0 10px #ff97ef';
+  customCursor.style.pointerEvents = 'none';
+  customCursor.style.zIndex = '10000';
+  customCursor.style.transform = 'translate(-50%, -50%)';
+  document.body.appendChild(customCursor);
+
+  document.addEventListener('mousemove', (e) => {
+    customCursor.style.left = `${e.clientX}px`;
+    customCursor.style.top = `${e.clientY}px`;
+  });
+</script>
+</div>
+</body>
+</html>
