@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaporwave Scroll</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/SobreMiEstiloAlternativo.css" />
+</head>
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <header class="section fade-in">
+    <h1>Sobre Mí</h1>
+    <img src="../Imagenes/1.FotoDePerfil.jpg" alt="Imagen">
+  </header>
+
+  <section class="section fade-in">
+    <p class="ColorTitle_P">Carrera</p>
+    <br>
+    <p class="ColorTitle">2020-2022</p>
+    <br>
+    <p>Bachillerato de Ciencias Puras</p>
+     <br>
+    <p class="ColorTitle">2022-2023</p>
+     <br>
+    <p>Grado Superior de DAM</p>
+     <br>
+    <p class="ColorTitle">2023-2025</p>
+     <br>
+    <p>Grado Superior de animación 2D , 3D , desarrollo de videojuegos y entornos interactivos </p>
+     <br>
+    <p class="ColorTitle">2025</p>
+     <br>
+    <p>Prácticas en NCA Smart, aquí hice tareas de todo tipo, desde diseño web hasta morion graphics con After effects</p>
+     <br>
+  </section>
+
+  <section class="section fade-in">
+    <p class="ColorTitle_P">Biografia</p>
+    <br>
+    <p>Soy un estudiante de animación 2D , 3D , desarrollo de videojuegos y entornos interactivos. Me inclino más por el desarrollo y diseño web por las posibilidades creativas que ofrece.</p>
+  </section>
+  
+  <section class="section fade-in">
+    <p class="ColorTitle_P">Sobre esta página</p>
+    <br>
+    <p>Es un estilo alternativo de la página "Sobre mí", para practicar CSS y JS.</p>
+  </section>
+
+  <footer class="section fade-in">
+    <p>© Engel Nieves</p>
+  </footer>
+
+  <script src="../JavaScript/ScrollFade-JS.js"></script>
+  <!-- Cursor personalizado + Estela del mouse -->
+<script>
+  // Contenedor invisible para estela
+  const trailContainer = document.createElement('div');
+  trailContainer.style.position = 'fixed';
+  trailContainer.style.top = '0';
+  trailContainer.style.left = '0';
+  trailContainer.style.pointerEvents = 'none';
+  trailContainer.style.zIndex = '9999';
+  document.body.appendChild(trailContainer);
+
+  const trailElements = [];
+
+  document.addEventListener('mousemove', (e) => {
+    const trail = document.createElement('div');
+    trail.style.width = '10px';
+    trail.style.height = '10px';
+    trail.style.borderRadius = '50%';
+    trail.style.position = 'absolute';
+    trail.style.left = `${e.clientX}px`;
+    trail.style.top = `${e.clientY}px`;
+    trail.style.background = 'rgba(255, 189, 234, 0.3)';
+    trail.style.boxShadow = '0 0 8px #ff97ef';
+    trail.style.transform = 'translate(-50%, -50%)';
+    trail.style.transition = 'opacity 0.1s ease-out';
+    trail.style.opacity = '1';
+
+    trailContainer.appendChild(trail);
+    trailElements.push(trail);
+
+    setTimeout(() => {
+      trail.style.opacity = '0';
+      setTimeout(() => {
+        trail.remove();
+      }, 400);
+    }, 50);
+  });
+
+  // Ocultar el cursor normal
+  document.body.style.cursor = 'none';
+
+  // Crear el cursor personalizado
+  const customCursor = document.createElement('div');
+  customCursor.style.width = '20px';
+  customCursor.style.height = '20px';
+  customCursor.style.borderRadius = '50%';
+  customCursor.style.position = 'fixed';
+  customCursor.style.background = '#fff175';
+  customCursor.style.boxShadow = '0 0 10px #ff97ef';
+  customCursor.style.pointerEvents = 'none';
+  customCursor.style.zIndex = '10000';
+  customCursor.style.transform = 'translate(-50%, -50%)';
+  document.body.appendChild(customCursor);
+
+  document.addEventListener('mousemove', (e) => {
+    customCursor.style.left = `${e.clientX}px`;
+    customCursor.style.top = `${e.clientY}px`;
+  });
+</script>
+
+</body>
+</html>
